@@ -1,0 +1,27 @@
+{
+  "name": "codeceptsjs",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000C\u0000o\u0000d\u0000e\u0000c\u0000e\u0000p\u0000t\u0000J\u0000S\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandhru2008/CodeceptJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chandhru2008/CodeceptJS/issues"
+  },
+  "homepage": "https://github.com/chandhru2008/CodeceptJS#readme",
+  "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "codeceptjs": "^3.7.3",
+    "playwright": "^1.53.2"
+  }
+}
