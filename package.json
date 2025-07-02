@@ -23,5 +23,8 @@
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "codeceptjs": "^3.7.3",
     "playwright": "^1.53.2"
+  },
+  "dependencies": {
+    "chai": "^5.2.0"
   }
 }
