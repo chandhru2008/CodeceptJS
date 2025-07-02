@@ -18,7 +18,14 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps/formSteps.js',
+    Table: './steps/webTableSteps.js'
+  },
+  plugins: {
+    allure: {
+      enabled: true,
+      require: "allure-codeceptjs",
+    }
   },
   name: 'CodeceptsJS',
 }

@@ -21,10 +21,8 @@
   "devDependencies": {
     "@codeceptjs/allure-legacy": "^1.0.2",
     "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-codeceptjs": "^3.3.0",
     "codeceptjs": "^3.7.3",
     "playwright": "^1.53.2"
-  },
-  "dependencies": {
-    "chai": "^5.2.0"
   }
 }
