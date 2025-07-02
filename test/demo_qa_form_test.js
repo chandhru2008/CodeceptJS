@@ -1,14 +1,15 @@
 Feature('Form Submission');
 
-Scenario('Submit form with valid input', async ({ I }) => {
+Scenario('Submit form with valid input',  ({ I }) => {
   I.amOnPage('/');
-  I.wait(2);
-  await I.submitForm(
-    "Chanadhru",
-    "gschandhru10@gmail.com",
-    "11/378 A Vanni mara street Paramakudi",
-    "11/378 A Vanni mara street Paramakudi"
-  );
+  let data = {
+    name : 'Chandhru',
+    email : 'gschandhru12@gmail.com',
+    currentAddress : '11/378 A Vanni mara street Paramakudi',
+    permanentAddress : '11/378 A Vanni mara street Paramakudi'
+  }
+  
+   I.submitForm(data);
 });
 
 Scenario('Submit form with invalid email', async ({ I }) => {
