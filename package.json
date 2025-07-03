@@ -25,6 +25,7 @@
     "playwright": "^1.53.2"
   },
   "dependencies": {
-    "chai": "^5.2.0"
+    "allure-codeceptjs": "^3.3.0",
+    "codeceptjs-assert": "^0.0.5"
   }
 }

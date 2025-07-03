@@ -15,6 +15,16 @@ exports.config = {
       browser: 'chromium',
       url: 'https://demoqa.com',
       show: true,
+    },
+
+  },
+  plugins: {
+    AssertWrapper: {
+      require: 'codeceptjs-assert'
+    },
+     allure: {
+      enabled: true,
+      require: "allure-codeceptjs"
     }
   },
   include: {

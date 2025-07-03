@@ -1,26 +1,21 @@
+const assert = require('assert');
+
 module.exports = {
-  validateTextField(label, value, minLength = 1) {
-    if (!value || value.trim().length < minLength) {
-      throw new Error(`${label} must be at least ${minLength} characters.`);
-    }
-  },
-
-  validateEmail(email) {
+  validateUserData(user) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      throw new Error('Invalid email format.');
-    }
-  },
 
-  validatePositiveNumber(label, value) {
-    if (isNaN(value) || Number(value) <= 0) {
-      throw new Error(`${label} must be a positive number.`);
-    }
-  },
+    assert.ok(user.firstName.length > 3, ` First name should be more than 3 characters, got "${user.firstName}"`);
+    assert.ok(user.lastName.length > 3, ` Last name should be more than 3 characters, got "${user.lastName}"`);
 
-  validateNonNegativeNumber(label, value) {
-    if (isNaN(value) || Number(value) < 0) {
-      throw new Error(`${label} must be a non-negative number.`);
-    }
-  },
+    const age = Number(user.age);
+    assert.ok(!isNaN(age) && age >= 0, ` Age should be a non-negative number, got "${user.age}"`);
+
+    const salary = Number(user.salary);
+    assert.ok(!isNaN(salary) && salary >= 0, ` Salary should be a non-negative number, got "${user.salary}"`);
+
+    assert.ok(emailRegex.test(user.email), `Invalid email format: "${user.email}"`);
+
+    assert.ok(user.department && user.department.length > 1, ` Department should not be empty`);
+  }
 };
+
