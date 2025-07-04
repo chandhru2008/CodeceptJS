@@ -12,17 +12,20 @@ exports.config = {
   // output: './output',
   helpers: {
     Playwright: {
-      browser: 'chromium',
-      url: 'https://demoqa.com',
+      browser: 'firefox',
+      url: 'https://inforiverwebtest-premium.azurewebsites.net/?csvLocation=Sanity.csv&config=Sanity.json&URLLoad=true',
       show: true,
+      waitForNavigation: "networkidle0",
+      waitForTimeout: 50000,
+      getPageTimeout: 900000,
+      waitForAction: 1000,
     },
-
   },
   plugins: {
     AssertWrapper: {
       require: 'codeceptjs-assert'
     },
-     allure: {
+    allure: {
       enabled: true,
       require: "allure-codeceptjs"
     }
